@@ -6,7 +6,7 @@ const checkAunthentication = (req, res, next) => {
     if (token) {
         let user = null
         try {
-            user = jwt.verify(token, process.env.JWT_SECRET);
+            user = jwt.verify(token, process.env.JWT_SECRE);
         }
         catch (err) {
 

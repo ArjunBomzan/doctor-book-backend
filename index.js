@@ -21,8 +21,10 @@ app.post("/khalti",khalti)
 
 
 
+
 app.use(handelResourceNotfound)
 app.use(handelServerError)
-app.listen(3000,()=>{
-    console.log("server is listening ate port 3000")
+const PORT=process.env.PORT
+app.listen(PORT,()=>{
+    console.log("server is listening ate port "+PORT)
 })

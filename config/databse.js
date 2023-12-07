@@ -1,3 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect('mongodb://127.0.0.1:27017/hospital')
+require("dotenv").config()
+const URI=process.env.MONGODB
+mongoose.connect(URI)
 .then(() => console.log('DB Connected!'));
