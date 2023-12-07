@@ -1,6 +1,7 @@
 const jwt = require("jsonwebtoken")
 
 const checkAunthentication = (req, res, next) => {
+
     let token = req.headers?.authorization?.split(" ")[1]
     if (token) {
         let user = null
